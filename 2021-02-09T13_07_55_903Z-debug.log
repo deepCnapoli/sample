@@ -1,0 +1,27 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'run', 'build-dev' ]
+2 info using npm@6.14.10
+3 info using node@v14.15.4
+4 verbose stack Error: Failed to parse json
+4 verbose stack Unexpected string in JSON at position 193 while parsing '{
+4 verbose stack   "name": "example-project",
+4 verbose stack   "versio'
+4 verbose stack     at parseError (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:470:11)
+4 verbose stack     at parseJson (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:105:26)
+4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:52:5
+4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:123:16
+4 verbose stack     at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+5 verbose cwd /Volumes/WD4-4TB/Udacity/Front-End-Lesson4/demo-code/webpack-udacity/fend-webpack-content
+6 verbose Darwin 20.3.0
+7 verbose argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "build-dev"
+8 verbose node v14.15.4
+9 verbose npm  v6.14.10
+10 error code EJSONPARSE
+11 error file /Volumes/WD4-4TB/Udacity/Front-End-Lesson4/demo-code/webpack-udacity/fend-webpack-content/package.json
+12 error JSON.parse Failed to parse json
+12 error JSON.parse Unexpected string in JSON at position 193 while parsing '{
+12 error JSON.parse   "name": "example-project",
+12 error JSON.parse   "versio'
+13 error JSON.parse Failed to parse package.json data.
+13 error JSON.parse package.json must be actual JSON, not just JavaScript.
+14 verbose exit [ 1, true ]
