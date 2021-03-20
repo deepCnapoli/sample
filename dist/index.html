@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Udacity-Project5-TravelApp</title>
+    </head>
+
+    <body>
+      <header>
+          <div class="headLogo">
+            meaningCloud.com
+          </div>
+          <div class="navDots"></div>
+      </header>
+
+    <main>
+      <section id="inputForm">        
+        <form class="" onsubmit="return Client.handleSubmit(event)">
+          <div>
+            <label for="destination">Enter your destination...</label>
+            <input id="destination" name="text" type ="text" placeholder="eg: Berlin" required>
+          </div>
+
+          <div class="dates">
+            <label for="departure">Departure Date:</label>
+            <input id="dateDepart" id="departure" type="date" required>
+          <div>
+            <input id="submitBtn" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" 
+            onsubmit="return Client.handleSubmit(event)">
+          </div>
+       </form>
+      </section>
+      <section>
+          <strong>Form Results:</strong>
+             <div id="results">Results</div>
+      </section>
+    </main>
+    
+	  <footer>
+      <h3 class="footerCredit">Created by: mondoreale.com</h3>
+    </footer>
+        <script>
+          /* if ("serviceWorker" in navigator) {
+                window.addEventListener("load", () => {
+                navigator.serviceWorker.register("/service-worker.js");
+               });
+             } */
+        </script>
+    <script type="text/javascript" src="main.js"></script></body>
+</html>
