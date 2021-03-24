@@ -1,0 +1,194 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+  margin: 40px;
+  background-color:#9F9A9A; 	
+}
+
+  .content {
+	/*grid-row-start / grid-column-start / grid-row-end / grid-column-end.*/	  
+	grid-area: 8 / 1 / span 20 / span 3;  
+  /*  grid-area: content;*/
+	background-image: url("../media/Procida_Ischa.jpg");
+/*	background-image: url("../media/hero-lighthouse.jpg");*/
+	background-position:bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;  
+	height: auto;  
+  }
+
+  .header {
+	grid-area: 1 / 1 / span 7 / span 3;    
+   /* grid-area: header;*/
+  }
+
+  .footer {
+	grid-area: 28 / 1 / span 6 / span 3;    
+  }
+
+.footer-text {
+  position: relative;
+  left: 10px;
+  top: 17px;	
+}
+
+  .wrapper { 
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas:
+     "header"
+     "content"
+     "footer"
+  }
+
+  @media only screen and (min-width: 500px)  {
+  .wrapper {
+
+    grid-template-columns: auto auto;
+    grid-template-areas:
+    "header   header"
+    "content  content"
+    "footer   footer";
+  }
+  }
+
+  @media only screen and (min-width: 600px)   {
+    .wrapper {
+      grid-gap: 20px;
+      grid-template-columns: auto auto auto;
+      grid-template-areas:
+      "header  header  header"
+      "content content content"
+      "footer  footer  footer";
+    }
+  }
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 150%; 
+}
+
+.header,
+.footer {
+  background-color:#3752F0;
+}
+
+.search {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 60px;
+	margin-left: 200px;
+	margin-right: 200px;
+    z-index: 100;
+	position: relative;
+	border-radius: 15px;
+	padding: 20px;
+	background: #3752F0;
+	box-shadow: 0 1px 3px hsla(0%, 0%, 0%, 0.2);
+}
+.search-departDate {
+	margin-left: 100px;
+}
+
+.btn {
+/*    width: 100%;*/
+/*    padding: 15px 20px;*/
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1;
+    transition: all ease 0.25s;
+ /*   &:hover {
+        cursor: pointer;
+    }*/
+}
+
+.btn-search {
+        border: 2px;
+/*        flex: auto auto auto;*/
+        font-size: 12px;
+        align-self: flex-end;
+        background: yellow;
+        justify-content: center;
+        padding: 5px 5px;
+    /*    &:hover {
+            background: yellow;
+        }*/
+}
+.btn-search:hover {
+	background: #B0F86F;
+}
+
+.search-form-HOLD {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+	margin-left: 200px;
+	margin-right: 200px;
+    z-index: 100;
+    position: relative;
+    border-radius: 5;
+    padding: 20px;
+    background: grey;
+    box-shadow: 0 1px 3px hsla(0%, 0%, 0%, 0.2);
+    label {
+        margin-bottom: 15px;
+		vertical-align: top;
+    }
+    &__destination,
+    &__departure-date {
+        flex: 1 1 auto;
+        & input {
+            margin-top: 4px;
+            height: 72px;
+            background: blue;
+            border: 2px solid blue;
+        }
+    }
+    &__btn-search {
+        border: 2px;
+        flex: 1 1 auto;
+        font-size: 16px;
+        align-self: flex-end;
+        color: yellow;
+        background: yellow;
+        justify-content: center;
+        padding: 18px 15px;
+        &:hover {
+            background: yellow;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .search-form {
+        padding: 30px;
+        label {
+            margin-bottom: 0;
+        }
+        &__destination {
+            flex: 1 1 50%;
+            max-width: 50%;
+        }
+        &__departure-date {
+            flex: 1 1 30%;
+            max-width: 30%;
+        }
+        &__btn-search {
+            flex: 1 1 15%;
+            max-width: 15%;
+        }
+    }
+}
+
+/*Resources1× 0.5× 0.25×Rerun*/
